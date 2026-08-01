@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "User account information and roles",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string", "enum": ["passenger", "driver", "staff", "manager"] },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "incidents": {
+      "title": "Incident Report",
+      "description": "Reported route or bus incidents",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "routeId": { "type": "string" },
+        "busId": { "type": "string" },
+        "reportedBy": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["title", "status"]
+    },
+    "thanks": {
+      "title": "Driver Thanks",
+      "description": "Passenger thank you notes to drivers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "driverId": { "type": "string" },
+        "driverName": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "message": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["driverId", "createdAt"]
+    }
+  }
+}
