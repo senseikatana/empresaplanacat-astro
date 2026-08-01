@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # build output
 dist/
 
@@ -22,3 +23,13 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+=======
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+>>>>>>> design-v2

@@ -1,0 +1,6 @@
+{
+  "name": "Empresa Plana - Transportes & Rutas",
+  "description": "Aplicación de movilidad y transporte público Empresa Plana con rutas, consulta de horaris, portal de empleados y conductores, gestión de flota e integración con autenticación.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
