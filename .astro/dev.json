@@ -1,0 +1,13 @@
+{
+	"pid": 594066,
+	"port": 4324,
+	"url": "http://localhost:4324",
+	"urls": {
+		"local": [
+			"http://localhost:4324/"
+		],
+		"network": []
+	},
+	"background": true,
+	"startedAt": "2026-07-26T10:04:08.873Z"
+}
