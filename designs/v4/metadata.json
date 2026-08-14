@@ -1,6 +1,0 @@
-{
-  "name": "Empresa Plana",
-  "description": "Aplicación de consulta de rutas, horarios y seguimiento de autobuses de Empresa Plana con autenticación Firebase.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
