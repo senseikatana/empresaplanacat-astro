@@ -116,7 +116,7 @@ spacing:
 
 ## Brand & Style
 
-The visual identity of the design system balances the heritage of a long-standing transportation provider with a modern, efficient digital experience. The aesthetic is **Corporate / Modern** with a touch of **Mediterranean** warmth, evoking feelings of reliability, safety, and the excitement of travel. 
+The visual identity of the design system balances the heritage of a long-standing transportation provider with a modern, efficient digital experience. The aesthetic is **Corporate / Modern** with a touch of **Mediterranean** warmth, evoking feelings of reliability, safety, and the excitement of travel.
 
 The design narrative is built on "Efficient Mobility." This is achieved through a structured, information-first layout that prioritizes ease of booking and schedule lookup. Visuals should feature high-quality photography of scenic coastal routes and the modern fleet, grounded by a sophisticated navy blue palette. The interface uses generous whitespace and a "Rounded" shape language to feel approachable and accessible to a wide demographic, from daily commuters to international tourists.
 
@@ -144,18 +144,18 @@ The layout follows a **12-column fluid grid** for desktop and a **4-column grid*
 
 ## Elevation & Depth
 
-Visual hierarchy is communicated through **Ambient Shadows** and **Tonal Layering**. 
+Visual hierarchy is communicated through **Ambient Shadows** and **Tonal Layering**.
 
-The background is kept flat and light. Interactive cards and the booking engine use extra-diffused, low-opacity shadows (e.g., `0px 4px 20px rgba(1, 57, 144, 0.08)`) to create a subtle lift. This "soft depth" mimics the quality of Mediterranean sunlight—bright but not harsh. 
+The background is kept flat and light. Interactive cards and the booking engine use extra-diffused, low-opacity shadows (e.g., `0px 4px 20px rgba(1, 57, 144, 0.08)`) to create a subtle lift. This "soft depth" mimics the quality of Mediterranean sunlight—bright but not harsh.
 
-Navigational elements like the top header should remain flat to anchor the page, while modals and cookie banners use a semi-transparent backdrop blur (12px) to focus the user’s attention on legal or critical information.
+Navigational elements like the top header should remain flat to anchor the page, while modals and cookie banners use a semi-transparent backdrop blur (12px) to focus the user's attention on legal or critical information.
 
 ## Shapes
 
-The shape language is consistently **Rounded**, reflecting a friendly and accessible service. 
+The shape language is consistently **Rounded**, reflecting a friendly and accessible service.
 
 - **Standard Elements:** Buttons, input fields, and small tags use a 0.5rem (8px) radius.
-- **Containers:** Service cards and the hero booking module use a 1rem (16px) radius to create a distinct, modern look. 
+- **Containers:** Service cards and the hero booking module use a 1rem (16px) radius to create a distinct, modern look.
 - **Icons:** Should follow a similar soft-cornered aesthetic; avoid sharp 90-degree angles in custom iconography.
 
 ## Components

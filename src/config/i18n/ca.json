@@ -1,0 +1,423 @@
+{
+  "common": {
+    "brand": "Empresa Plana",
+    "nav": {
+      "services": "Serveis",
+      "locations": "Localitzacions",
+      "downloads": "Descàrregues",
+      "contact": "Contacte",
+      "bookNow": "RESERVA ARA"
+    },
+    "lang": {
+      "ca": "CA",
+      "es": "ES",
+      "en": "EN"
+    },
+    "phone": "+34 977 553 680",
+    "footer": {
+      "privacy": "Política de privacitat",
+      "terms": "Termes del servei",
+      "cookies": "Cookies",
+      "contact": "Contacta'ns",
+      "fleet": "Flota",
+      "sitemap": "Mapa del lloc",
+      "copyright": "© 2024 Empresa Plana. Tots els drets reservats. Mobilitat eficient per al Mediterrani."
+    }
+  },
+  "home": {
+    "title": "Empresa Plana - Pantalles",
+    "subtitle": "Pantalles generades des del projecte Stitch «Dashboard Empresa Plana».",
+    "screens": {
+      "routes": {
+        "label": "Rutes i Horaris",
+        "desc": "Cercador de línies i descàrrega d'horaris"
+      },
+      "locations": {
+        "label": "On Som",
+        "desc": "Oficina central i delegacions"
+      },
+      "discretionary": {
+        "label": "Serveis Discrecionals",
+        "desc": "Autocars a mida per a grups i empreses"
+      },
+      "variant1": {
+        "label": "Homepage Variant 1",
+        "desc": "Landing amb widget de reserva (variant 1)"
+      },
+      "variant2": {
+        "label": "Homepage Variant 2",
+        "desc": "Landing hero dividit (variant 2)"
+      },
+      "mobile": {
+        "label": "App Mòbil",
+        "desc": "Landing mòbil amb cercador"
+      },
+      "locationsMobile": {
+        "label": "On Som Mòbil",
+        "desc": "Versió mòbil de delegacions"
+      }
+    }
+  },
+  "routes": {
+    "title": "Descàrregues i Horaris - Empresa Plana",
+    "hero": {
+      "title": "Rutes i Horaris",
+      "subtitle": "Localitza fàcilment els horaris d'autobús i les rutes disponibles per arribar a la teva destinació en transport públic per la Costa Daurada."
+    },
+    "search": {
+      "title": "Cercador de Línies",
+      "originLabel": "Localitat d'origen",
+      "destinationLabel": "Localitat de destinació",
+      "dateLabel": "Data",
+      "timeLabel": "Horari",
+      "originPlaceholder": "Seleccionar origen...",
+      "destinationPlaceholder": "Seleccionar destinació...",
+      "anyTime": "Qualsevol hora",
+      "morning": "07:00 a 12:00",
+      "afternoon": "12:00 a 16:00",
+      "evening": "16:00 a 20:00",
+      "direct": "Rutes directes",
+      "withTransfers": "Amb transbordaments",
+      "submit": "CERCAR LÍNIES",
+      "disclaimer": "* El compliment d'aquests horaris està condicionat a la fluïdesa del trànsit."
+    },
+    "origins": {
+      "barcelonaAirport": "Aeroport de Barcelona",
+      "reusAirport": "Aeroport de Reus",
+      "tarragona": "Tarragona",
+      "salou": "Salou",
+      "cambrils": "Cambrils",
+      "portAventura": "PortAventura"
+    },
+    "lines": {
+      "title": "Les Línies Més Buscades",
+      "subtitle": "Descarrega els horaris en PDF de les nostres rutes principals.",
+      "downloadPdf": "Descarregar PDF",
+      "viewAll": "Veure totes les línies en PDF",
+      "cards": {
+        "barcelonaAirport": {
+          "route": "Barcelona - Aeroport",
+          "stops": "Tarragona - La Pineda - Salou - Cambrils"
+        },
+        "tarragonaBarcelona": {
+          "route": "Tarragona - Barcelona",
+          "stops": "Barcelona"
+        },
+        "costaDorada": {
+          "route": "Costa Daurada Central",
+          "stops": "La Pineda - Salou - Cambrils"
+        },
+        "reusSalou": {
+          "route": "e5 Reus - Salou",
+          "stops": "Salou"
+        },
+        "estacioCamp": {
+          "route": "Estació del Camp",
+          "stops": "Estació del Camp AVE"
+        },
+        "penedes": {
+          "route": "L68 Penedès",
+          "stops": "Vilafranca del Penedès"
+        }
+      }
+    },
+    "banner": {
+      "title": "Accés de patinets elèctrics als autobusos",
+      "body": "Seguint les instruccions de l'Autoritat Territorial de Mobilitat i per motius de seguretat, no es podrà accedir ni viatjar en el transport públic amb patinets elèctrics i altres vehicles elèctrics de mobilitat personal, ni tan sols plegats."
+    }
+  },
+  "mobileApp": {
+    "title": "Empresa Plana - App Mòbil",
+    "hero": {
+      "title": "On vas?"
+    },
+    "search": {
+      "fromPlaceholder": "Des de (p. ex. Aeroport de Barcelona)",
+      "toPlaceholder": "Fins a (p. ex. Salou)",
+      "today": "Avui",
+      "onePassenger": "1 Passatger",
+      "submit": "CERCAR AUTOBUSOS"
+    },
+    "popular": {
+      "title": "Serveis Populars",
+      "airport": {
+        "tag": "Ruta Exprés",
+        "title": "Trasllats a l'Aeroport"
+      },
+      "excursions": {
+        "title": "Excursions",
+        "desc": "Sortides i excursions d'un dia"
+      },
+      "timetables": {
+        "title": "Horaris",
+        "desc": "Horaris d'autobusos locals"
+      }
+    },
+    "nav": {
+      "search": "Cercar",
+      "tickets": "Bitllets",
+      "stops": "Parades",
+      "profile": "Perfil"
+    }
+  },
+  "locations": {
+    "title": "On Som - Empresa Plana",
+    "hero": {
+      "title": "ON SOM",
+      "subtitle": "Empresa Plana opera a les principals ciutats del Camp de Tarragona i destinacions turístiques de la Costa Daurada, a més de connectar-les en autobús amb els aeroports de Barcelona i de Reus."
+    },
+    "mapBadge": "Xarxa d'Oficines",
+    "central": {
+      "title": "Oficina Central",
+      "tag": "1. CENTRAL",
+      "address1": "Polígon Industrial Riu Clar, parcel·la 145-155",
+      "address2": "Polígon Industrial Riu Clar",
+      "city": "43006 TARRAGONA"
+    },
+    "delegations": {
+      "title": "Delegacions",
+      "label": "Delegació {n}",
+      "bases": {
+        "tarragona": {
+          "name": "Base Tarragona",
+          "address": "C/ Colom, 29",
+          "city": "43001 TARRAGONA"
+        },
+        "reus": {
+          "name": "Base Reus",
+          "address": "C/ Sabaters, 5, Pol. Ind. CIM El Camp",
+          "city": "43204 REUS"
+        },
+        "garraf": {
+          "name": "Base Garraf",
+          "address": "C/ Mas d'en Borràs, 5, Pol. Ind. Masia d'en Notari",
+          "city": "08800 VILANOVA I LA GELTRÚ"
+        },
+        "calafell": {
+          "name": "Base Calafell",
+          "address": "C/ Cobertera, 6, Parc Empresarial de Calafell",
+          "city": "43820 CALAFELL"
+        },
+        "barcelona": {
+          "name": "Base Barcelona",
+          "address": "C/ Botànica, 135, Pol. Pedrosa",
+          "city": "08908 L'HOSPITALET DE LLOBREGAT"
+        },
+        "hospitalet": {
+          "name": "Base L'Hospitalet",
+          "address": "C/ Torroja, 2, Pol. Ind. Les Tapies",
+          "city": "43890 L'HOSPITALET DE L'INFANT"
+        }
+      }
+    }
+  },
+  "homeVariant1": {
+    "title": "Empresa Plana - Homepage",
+    "booking": {
+      "tabs": {
+        "booking": "Reserva",
+        "destination": "Destinació",
+        "passengers": "Passatgers"
+      },
+      "origin": "Origen",
+      "destination": "Destinació",
+      "date": "Data",
+      "passengers": "Passatgers",
+      "originPlaceholder": "Aeroport de Barcelona",
+      "destinationPlaceholder": "Salou",
+      "datePlaceholder": "27/07/2026",
+      "passengersPlaceholder": "1 Adult",
+      "search": "CERCAR"
+    },
+    "routes": {
+      "title": "RUTES POPULARS",
+      "startingFrom": "Des de",
+      "price": "12,50 €",
+      "cards": {
+        "barcelona": {
+          "name": "Barcelona",
+          "desc": "Barcelona és una preciosa destinació de la platja mediterrània."
+        },
+        "salou": {
+          "name": "Salou",
+          "desc": "Salou és coneguda per la seva preciosa platja mediterrània i el seu ambient vibrant."
+        },
+        "tarragona": {
+          "name": "Tarragona",
+          "desc": "Tarragona ofereix una barreja d'història antiga i bells paisatges costaners."
+        }
+      }
+    },
+    "footer": {
+      "services": "Serveis",
+      "routesSchedules": "Rutes i Horaris",
+      "privateServices": "Serveis Discrecionals",
+      "contact": "Dades de contacte",
+      "social": "Xarxes Socials",
+      "legal": "Enllaços Legals"
+    }
+  },
+  "locationsMobile": {
+    "title": "On Som - Empresa Plana",
+    "appbar": {
+      "title": "On Som"
+    },
+    "hero": {
+      "title": "On Som"
+    },
+    "central": {
+      "title": "Oficina Central",
+      "address": "Polígon Industrial Riu Clar, Carrer del Plom, s/n, 43006 Tarragona"
+    },
+    "delegations": {
+      "title": "Delegacions",
+      "bases": {
+        "tarragona": {
+          "name": "Base Tarragona",
+          "area": "Pol. Ind. Riu Clar"
+        },
+        "reus": {
+          "name": "Base Reus",
+          "area": "Av. de Salou, s/n"
+        },
+        "garraf": {
+          "name": "Base Garraf",
+          "area": "Pol. Ind. Vilanova i la Geltrú"
+        },
+        "calafell": {
+          "name": "Base Calafell",
+          "area": "Ctra. C-31, km 136"
+        },
+        "barcelona": {
+          "name": "Base Barcelona",
+          "area": "Zona Franca"
+        },
+        "hospitalet": {
+          "name": "Base L'Hospitalet de l'Infant",
+          "area": "Pol. Ind. Les Tàpies"
+        }
+      }
+    },
+    "nav": {
+      "routes": "Rutes",
+      "tickets": "Bitllets",
+      "locations": "Llocs",
+      "services": "Serveis"
+    }
+  },
+  "homeVariant2": {
+    "title": "Empresa Plana - Homepage",
+    "brand": {
+      "name": "PLANA",
+      "suffix": "60"
+    },
+    "nav": {
+      "routesSchedules": "Rutes i Horaris",
+      "privateServices": "Serveis Discrecionals",
+      "aboutUs": "Sobre Nosaltres",
+      "contact": "Contacte"
+    },
+    "booking": {
+      "tabs": {
+        "booking": "Reserva",
+        "destination": "Destinació",
+        "passengers": "Passatgers"
+      },
+      "origin": "Origen",
+      "destination": "Destinació",
+      "date": "Data",
+      "passengers": "Passatgers",
+      "originPlaceholder": "Aeroport de Barcelona",
+      "destinationPlaceholder": "Salou",
+      "datePlaceholder": "27/07/2026",
+      "oneAdult": "1 Adult",
+      "twoAdults": "2 Adults",
+      "search": "CERCAR"
+    },
+    "routes": {
+      "title": "Rutes Populars",
+      "startingFrom": "Des de",
+      "price": "12,50 €",
+      "cards": {
+        "barcelona": {
+          "name": "Barcelona",
+          "desc": "Barcelona és una bonica ciutat mediterrània amb una rica història i cultura, perfecta per a la teva propera escapada."
+        },
+        "salou": {
+          "name": "Salou",
+          "desc": "Salou és coneguda per les seves impressionants platges i el seu animat ambient a la costa mediterrània."
+        },
+        "tarragona": {
+          "name": "Tarragona",
+          "desc": "Tarragona ofereix una magnífica barreja d'herència romana i belles vistes costaneres."
+        }
+      }
+    },
+    "footer": {
+      "services": "Serveis",
+      "contact": "Dades de contacte",
+      "social": "Xarxes Socials",
+      "legal": "Enllaços Legals",
+      "email": "empresaplana.com"
+    }
+  },
+  "discretionary": {
+    "title": "Serveis Discrecionals - Empresa Plana",
+    "hero": {
+      "title": "Serveis Discrecionals a Mida",
+      "subtitle": "Comptem amb una dilatada experiència en el lloguer d'autobusos amb conductor professional per a particulars, empreses i entitats per territori nacional i internacional.",
+      "cta": "SOL·LICITAR PRESSUPOST"
+    },
+    "professionals": {
+      "title": "Solucions Professionals",
+      "subtitle": "Facilitem el transport col·lectiu, principalment a la província de Tarragona. Treballem habitualment amb empreses, associacions i grups que desitgen llogar autocars per a esdeveniments especials, congressos i viatges turístics.",
+      "bullets": [
+        "Solucions a mida per a institucions i centres educatius.",
+        "Màxima seguretat i confort amb una flota de més de 600 autocars.",
+        "Última tecnologia en control GPS i navegació."
+      ]
+    },
+    "services": {
+      "title": "Serveis per a cada necessitat",
+      "subtitle": "La nostra flota s'adapta als teus requeriments específics, garantint puntualitat, confort i un servei de primera classe a cada trajecte.",
+      "cards": {
+        "transfers": {
+          "tag": "Aeroports i Hotels",
+          "title": "Transfers",
+          "desc": "Trasllats en autobús des de l'aeroport de Barcelona i de Reus, fins a la zona del seu hotel, a la Costa Daurada."
+        },
+        "weddings": {
+          "title": "Casaments i celebracions",
+          "desc": "Trasllats en grup en autocar per a ocasions especials. Garanteixi la comoditat i puntualitat dels seus convidats."
+        },
+        "adapted": {
+          "title": "Autocars adaptats",
+          "desc": "Disposem d'autobusos i autocars adaptats per a persones amb mobilitat reduïda (P. M. R.)"
+        },
+        "mice": {
+          "title": "Transports discrecionals",
+          "desc": "Barcelona és una de les principals ciutats organitzadores d'esdeveniments MICE (Reunions, Incentius, Congressos, i Esdeveniments)."
+        },
+        "companies": {
+          "title": "Empreses i fàbriques",
+          "desc": "Autobusos per traslladar regularment els treballadors cap a les seves instal·lacions i acompanyar els seus clients."
+        },
+        "school": {
+          "title": "Transport escolar",
+          "desc": "Autocars per a nens i joves: excursions, campaments, competicions esportives i esdeveniments especials."
+        }
+      },
+      "moreInfo": "MÉS INFORMACIÓ",
+      "viewDetails": "Veure detalls →"
+    },
+    "cta": {
+      "title": "Més Informació?",
+      "subtitle": "Si necessites informació sobre els nostres serveis o vols planificar la logística de transport per al teu grup, contacta'ns avui mateix per obtenir un pressupost a mida.",
+      "areaTarragona": "Àrea Tarragona",
+      "areaBarcelona": "Àrea Barcelona i Garraf",
+      "phoneTarragona": "+34 977 54 04 93",
+      "phoneBarcelona": "+34 663 854 611",
+      "submit": "SOL·LICITA PRESSUPOST"
+    }
+  }
+}

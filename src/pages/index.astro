@@ -1,11 +1,48 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+export const prerender = false;
+
+const screens = [
+	{ href: '/rutas-horarios', label: 'Rutas y Horarios', desc: 'Buscador de líneas y descargas de horarios' },
+	{ href: '/donde-estamos', label: 'Dónde Estamos', desc: 'Oficina central y delegaciones' },
+	{ href: '/servicios-discrecionales', label: 'Servicios Discrecionales', desc: 'Autocares a medida para grupos y empresas' },
+	{ href: '/home-variant-1', label: 'Homepage Variante 1', desc: 'Landing con booking widget (variante 1)' },
+	{ href: '/home-variant-2', label: 'Homepage Variante 2', desc: 'Landing split hero (variante 2)' },
+	{ href: '/mobile', label: 'Mobile App', desc: 'Landing mobile con buscador' },
+	{ href: '/donde-estamos-mobile', label: 'Dónde Estamos Mobile', desc: 'Versión móvil de delegaciones' },
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Empresa Plana - Pantallas" bodyClass="bg-background text-on-background font-body-md antialiased">
+	<header class="bg-deep-navy text-on-primary py-6 px-margin-mobile md:px-margin-desktop">
+		<div class="max-w-container-max mx-auto">
+			<h1 class="font-headline-lg text-headline-lg font-bold">Empresa Plana</h1>
+			<p class="font-body-lg text-body-lg text-on-primary/80 mt-2">
+				Pantallas generadas desde el proyecto Stitch «Dashboard Empresa Plana».
+			</p>
+		</div>
+	</header>
+	<main class="flex-grow max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+		<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+			{
+				screens.map((screen) => (
+					<li>
+						<a
+							class="block h-full bg-surface-container-lowest rounded-xl border border-outline-variant/20 ambient-shadow p-6 hover:-translate-y-1 hover:border-coastal-teal/40 transition-all duration-300"
+							href={screen.href}
+						>
+							<h2 class="font-headline-md text-headline-md text-deep-navy mb-2">{screen.label}</h2>
+							<p class="font-body-md text-body-md text-on-surface-variant">{screen.desc}</p>
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</main>
+	<footer class="bg-deep-navy text-on-primary/80 py-stack-md px-margin-mobile md:px-margin-desktop">
+		<div class="max-w-container-max mx-auto font-body-md text-body-md">
+			© 2024 Empresa Plana. All rights reserved.
+		</div>
+	</footer>
+</BaseLayout>

@@ -1,0 +1,423 @@
+{
+  "common": {
+    "brand": "Empresa Plana",
+    "nav": {
+      "services": "Services",
+      "locations": "Locations",
+      "downloads": "Downloads",
+      "contact": "Contact",
+      "bookNow": "BOOK NOW"
+    },
+    "lang": {
+      "ca": "CA",
+      "es": "ES",
+      "en": "EN"
+    },
+    "phone": "+34 977 553 680",
+    "footer": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookies",
+      "contact": "Contact Us",
+      "fleet": "Fleet",
+      "sitemap": "Sitemap",
+      "copyright": "© 2024 Empresa Plana. All rights reserved. Efficient Mobility for the Mediterranean."
+    }
+  },
+  "home": {
+    "title": "Empresa Plana - Screens",
+    "subtitle": "Screens generated from the Stitch project \"Dashboard Empresa Plana\".",
+    "screens": {
+      "routes": {
+        "label": "Routes & Schedules",
+        "desc": "Line search and schedule downloads"
+      },
+      "locations": {
+        "label": "Where We Are",
+        "desc": "Central office and delegations"
+      },
+      "discretionary": {
+        "label": "Discretionary Services",
+        "desc": "Tailor-made coaches for groups and companies"
+      },
+      "variant1": {
+        "label": "Homepage Variant 1",
+        "desc": "Landing with booking widget (variant 1)"
+      },
+      "variant2": {
+        "label": "Homepage Variant 2",
+        "desc": "Split hero landing (variant 2)"
+      },
+      "mobile": {
+        "label": "Mobile App",
+        "desc": "Mobile landing with search"
+      },
+      "locationsMobile": {
+        "label": "Where We Are Mobile",
+        "desc": "Mobile version of delegations"
+      }
+    }
+  },
+  "routes": {
+    "title": "Downloads & Schedules - Empresa Plana",
+    "hero": {
+      "title": "Routes & Schedules",
+      "subtitle": "Easily find the bus times and available routes to reach your destination by public transport across the Costa Dorada."
+    },
+    "search": {
+      "title": "Line Finder",
+      "originLabel": "Origin town",
+      "destinationLabel": "Destination town",
+      "dateLabel": "Date",
+      "timeLabel": "Time",
+      "originPlaceholder": "Select origin...",
+      "destinationPlaceholder": "Select destination...",
+      "anyTime": "Any time",
+      "morning": "07:00 to 12:00",
+      "afternoon": "12:00 to 16:00",
+      "evening": "16:00 to 20:00",
+      "direct": "Direct routes",
+      "withTransfers": "With transfers",
+      "submit": "SEARCH LINES",
+      "disclaimer": "* Compliance with these times is subject to traffic flow."
+    },
+    "origins": {
+      "barcelonaAirport": "Barcelona Airport",
+      "reusAirport": "Reus Airport",
+      "tarragona": "Tarragona",
+      "salou": "Salou",
+      "cambrils": "Cambrils",
+      "portAventura": "PortAventura"
+    },
+    "lines": {
+      "title": "Most Searched Lines",
+      "subtitle": "Download the PDF timetables for our main routes.",
+      "downloadPdf": "Download PDF",
+      "viewAll": "View all lines in PDF",
+      "cards": {
+        "barcelonaAirport": {
+          "route": "Barcelona - Airport",
+          "stops": "Tarragona - La Pineda - Salou - Cambrils"
+        },
+        "tarragonaBarcelona": {
+          "route": "Tarragona - Barcelona",
+          "stops": "Barcelona"
+        },
+        "costaDorada": {
+          "route": "Central Costa Dorada",
+          "stops": "La Pineda - Salou - Cambrils"
+        },
+        "reusSalou": {
+          "route": "e5 Reus - Salou",
+          "stops": "Salou"
+        },
+        "estacioCamp": {
+          "route": "Estació del Camp",
+          "stops": "Estació del Camp AVE"
+        },
+        "penedes": {
+          "route": "L68 Penedès",
+          "stops": "Vilafranca del Penedès"
+        }
+      }
+    },
+    "banner": {
+      "title": "Access of electric scooters on buses",
+      "body": "Following the instructions of the Territorial Mobility Authority and for safety reasons, you may not board or travel on public transport with electric scooters or other personal electric mobility vehicles, even when folded."
+    }
+  },
+  "mobileApp": {
+    "title": "Empresa Plana - Mobile Landing Page",
+    "hero": {
+      "title": "Where are you going?"
+    },
+    "search": {
+      "fromPlaceholder": "From (e.g. Barcelona Airport)",
+      "toPlaceholder": "To (e.g. Salou)",
+      "today": "Today",
+      "onePassenger": "1 Passenger",
+      "submit": "SEARCH BUSES"
+    },
+    "popular": {
+      "title": "Popular Services",
+      "airport": {
+        "tag": "Express Route",
+        "title": "Airport Transfers"
+      },
+      "excursions": {
+        "title": "Excursions",
+        "desc": "Day trips & tours"
+      },
+      "timetables": {
+        "title": "Timetables",
+        "desc": "Local bus schedules"
+      }
+    },
+    "nav": {
+      "search": "Search",
+      "tickets": "Tickets",
+      "stops": "Stops",
+      "profile": "Profile"
+    }
+  },
+  "locations": {
+    "title": "Where We Are - Empresa Plana",
+    "hero": {
+      "title": "WHERE WE ARE",
+      "subtitle": "Empresa Plana operates in the main cities of Camp de Tarragona and tourist destinations on the Costa Daurada, as well as connecting them by bus to Barcelona and Reus airports."
+    },
+    "mapBadge": "Office Network",
+    "central": {
+      "title": "Central Office",
+      "tag": "1. CENTRAL",
+      "address1": "Polígono Industrial Riu Clar, plot 145-155",
+      "address2": "Polígono Industrial Riu Clar",
+      "city": "43006 TARRAGONA"
+    },
+    "delegations": {
+      "title": "Delegations",
+      "label": "Delegation {n}",
+      "bases": {
+        "tarragona": {
+          "name": "Tarragona Base",
+          "address": "29 Colom St.",
+          "city": "43001 TARRAGONA"
+        },
+        "reus": {
+          "name": "Reus Base",
+          "address": "5 Sabaters St., CIM El Camp Industrial Estate",
+          "city": "43204 REUS"
+        },
+        "garraf": {
+          "name": "Garraf Base",
+          "address": "5 Mas d'en Borràs St., Masia d'en Notari Industrial Estate",
+          "city": "08800 VILANOVA I LA GELTRÚ"
+        },
+        "calafell": {
+          "name": "Calafell Base",
+          "address": "6 Cobertera St., Calafell Business Park",
+          "city": "43820 CALAFELL"
+        },
+        "barcelona": {
+          "name": "Barcelona Base",
+          "address": "135 Botànica St., Pedrosa Industrial Estate",
+          "city": "08908 L'HOSPITALET DE LLOBREGAT"
+        },
+        "hospitalet": {
+          "name": "L'Hospitalet Base",
+          "address": "2 Torroja St., Les Tapies Industrial Estate",
+          "city": "43890 L'HOSPITALET DE L'INFANT"
+        }
+      }
+    }
+  },
+  "homeVariant1": {
+    "title": "Empresa Plana - Homepage",
+    "booking": {
+      "tabs": {
+        "booking": "Booking",
+        "destination": "Destination",
+        "passengers": "Passengers"
+      },
+      "origin": "Origin",
+      "destination": "Destination",
+      "date": "Date",
+      "passengers": "Passengers",
+      "originPlaceholder": "Barcelona Airport",
+      "destinationPlaceholder": "Salou",
+      "datePlaceholder": "27/07/2026",
+      "passengersPlaceholder": "1 Adult",
+      "search": "SEARCH"
+    },
+    "routes": {
+      "title": "POPULAR ROUTES",
+      "startingFrom": "Starting from",
+      "price": "€12.50",
+      "cards": {
+        "barcelona": {
+          "name": "Barcelona",
+          "desc": "Barcelona is a beautiful destination of the mediterranean beach the ago."
+        },
+        "salou": {
+          "name": "Salou",
+          "desc": "Salou is known for its beautiful mediterranean beach and vibrant atmosphere."
+        },
+        "tarragona": {
+          "name": "Tarragona",
+          "desc": "Tarragona offers a mix of ancient history and beautiful coastal scenery."
+        }
+      }
+    },
+    "footer": {
+      "services": "Services",
+      "routesSchedules": "Routes & Schedules",
+      "privateServices": "Private Services",
+      "contact": "Contact info",
+      "social": "Social Media",
+      "legal": "Legal Links"
+    }
+  },
+  "locationsMobile": {
+    "title": "Where We Are - Empresa Plana",
+    "appbar": {
+      "title": "Where We Are"
+    },
+    "hero": {
+      "title": "Where We Are"
+    },
+    "central": {
+      "title": "Central Office",
+      "address": "Polígono Industrial Riu Clar, Plomo St., s/n, 43006 Tarragona"
+    },
+    "delegations": {
+      "title": "Delegations",
+      "bases": {
+        "tarragona": {
+          "name": "Tarragona Base",
+          "area": "Riu Clar Industrial Estate"
+        },
+        "reus": {
+          "name": "Reus Base",
+          "area": "Salou Ave., s/n"
+        },
+        "garraf": {
+          "name": "Garraf Base",
+          "area": "Vilanova i la Geltrú Industrial Estate"
+        },
+        "calafell": {
+          "name": "Calafell Base",
+          "area": "C-31 Rd., km 136"
+        },
+        "barcelona": {
+          "name": "Barcelona Base",
+          "area": "Zona Franca"
+        },
+        "hospitalet": {
+          "name": "L'Hospitalet de l'Infant Base",
+          "area": "Les Tàpies Industrial Estate"
+        }
+      }
+    },
+    "nav": {
+      "routes": "Routes",
+      "tickets": "Tickets",
+      "locations": "Locations",
+      "services": "Services"
+    }
+  },
+  "homeVariant2": {
+    "title": "Empresa Plana - Homepage",
+    "brand": {
+      "name": "PLANA",
+      "suffix": "60"
+    },
+    "nav": {
+      "routesSchedules": "Routes & Schedules",
+      "privateServices": "Private Services",
+      "aboutUs": "About Us",
+      "contact": "Contact"
+    },
+    "booking": {
+      "tabs": {
+        "booking": "Booking",
+        "destination": "Destination",
+        "passengers": "Passengers"
+      },
+      "origin": "Origin",
+      "destination": "Destination",
+      "date": "Date",
+      "passengers": "Passengers",
+      "originPlaceholder": "Barcelona Airport",
+      "destinationPlaceholder": "Salou",
+      "datePlaceholder": "27/07/2026",
+      "oneAdult": "1 Adult",
+      "twoAdults": "2 Adults",
+      "search": "SEARCH"
+    },
+    "routes": {
+      "title": "Popular Routes",
+      "startingFrom": "Starting from",
+      "price": "€12.50",
+      "cards": {
+        "barcelona": {
+          "name": "Barcelona",
+          "desc": "Barcelona is a beautiful mediterranean city with a rich history and culture, perfect for your next getaway."
+        },
+        "salou": {
+          "name": "Salou",
+          "desc": "Salou is known for its stunning beaches and lively atmosphere on the Mediterranean coast."
+        },
+        "tarragona": {
+          "name": "Tarragona",
+          "desc": "Tarragona offers a magnificent blend of Roman heritage and beautiful coastal views."
+        }
+      }
+    },
+    "footer": {
+      "services": "Services",
+      "contact": "Contact info",
+      "social": "Social Media",
+      "legal": "Legal Links",
+      "email": "empresaplana.com"
+    }
+  },
+  "discretionary": {
+    "title": "Discretionary Services - Empresa Plana",
+    "hero": {
+      "title": "Tailor-Made Discretionary Services",
+      "subtitle": "We have extensive experience in renting buses with a professional driver for individuals, companies and organisations nationwide and internationally.",
+      "cta": "REQUEST A QUOTE"
+    },
+    "professionals": {
+      "title": "Professional Solutions",
+      "subtitle": "We facilitate group transport, mainly in the province of Tarragona. We regularly work with companies, associations and groups wishing to hire coaches for special events, congresses and tourist trips.",
+      "bullets": [
+        "Tailor-made solutions for institutions and educational centres.",
+        "Maximum safety and comfort with a fleet of more than 600 coaches.",
+        "Latest GPS control and navigation technology."
+      ]
+    },
+    "services": {
+      "title": "Services for every need",
+      "subtitle": "Our fleet adapts to your specific requirements, guaranteeing punctuality, comfort and first-class service on every journey.",
+      "cards": {
+        "transfers": {
+          "tag": "Airports and Hotels",
+          "title": "Transfers",
+          "desc": "Bus transfers from Barcelona and Reus airports to your hotel area on the Costa Daurada."
+        },
+        "weddings": {
+          "title": "Weddings and celebrations",
+          "desc": "Group coach transfers for special occasions. Guarantee the comfort and punctuality of your guests."
+        },
+        "adapted": {
+          "title": "Adapted coaches",
+          "desc": "We have buses and coaches adapted for people with reduced mobility (PRM)."
+        },
+        "mice": {
+          "title": "Discretionary transport",
+          "desc": "Barcelona is one of the main host cities for MICE events (Meetings, Incentives, Conferences, and Events)."
+        },
+        "companies": {
+          "title": "Companies and factories",
+          "desc": "Buses to regularly transport workers to their facilities and accompany their clients."
+        },
+        "school": {
+          "title": "School transport",
+          "desc": "Coaches for children and young people: excursions, camps, sports competitions and special events."
+        }
+      },
+      "moreInfo": "MORE INFO",
+      "viewDetails": "View details →"
+    },
+    "cta": {
+      "title": "Need More Info?",
+      "subtitle": "If you need information about our services or wish to plan the transport logistics for your group, contact us today for a tailor-made quote.",
+      "areaTarragona": "Tarragona Area",
+      "areaBarcelona": "Barcelona & Garraf Area",
+      "phoneTarragona": "+34 977 54 04 93",
+      "phoneBarcelona": "+34 663 854 611",
+      "submit": "REQUEST A QUOTE"
+    }
+  }
+}
