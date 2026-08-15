@@ -1,14 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSiteInfo, getCanonicalUrl } from '../config/site-info';
+import { getLocale, getDictionary } from '../config/i18n';
 
 export const prerender = false;
 
-const title = "Empresa Plana - Homepage";
-const lang = "en";
+const locale = getLocale(Astro.url.searchParams.get('lang'));
+const dict = getDictionary(locale);
+const siteInfo = getSiteInfo({
+	title: dict.homeVariant2.title,
+	description: dict.home.screens.variant2.desc,
+	lang: locale,
+	canonicalUrl: getCanonicalUrl(Astro.url.pathname),
+});
 const bodyClass = "bg-background font-body-md text-on-surface antialiased";
 ---
 
-<BaseLayout title={title} lang={lang} bodyClass={bodyClass}>
+<BaseLayout {...siteInfo} bodyClass={bodyClass}>
 <!-- Utility Bar -->
 <div class="w-full bg-surface-container-lowest border-b border-surface-variant hidden md:block">
 <div class="max-w-container-max mx-auto px-margin-desktop py-2 flex justify-end items-center gap-gutter text-sm font-label-md text-on-surface-variant">
@@ -40,7 +48,7 @@ const bodyClass = "bg-background font-body-md text-on-surface antialiased";
 <!-- Actions (Desktop) -->
 <div class="hidden md:flex items-center gap-4">
 <button class="font-button text-button text-on-surface-variant hover:text-primary transition-colors duration-200">Contact</button>
-<button class="bg-primary text-on-primary font-button text-button px-6 py-3 rounded-DEFAULT hover:opacity-90 transition-opacity">BOOK NOW</button>
+<button class="bg-primary text-on-primary font-button text-button px-6 py-3 rounded hover:opacity-90 transition-opacity">BOOK NOW</button>
 </div>
 <!-- Mobile Menu Toggle -->
 <button class="md:hidden text-primary">
@@ -63,14 +71,14 @@ const bodyClass = "bg-background font-body-md text-on-surface antialiased";
 <label class="font-label-md text-label-md text-on-surface-variant">Origin</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">location_on</span>
-<input class="w-full pl-10 pr-4 py-3 rounded-DEFAULT border border-surface-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none font-body-md text-on-surface transition-colors bg-surface-container-lowest" placeholder="Barcelona Airport" type="text"/>
+<input class="w-full pl-10 pr-4 py-3 rounded border border-surface-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none font-body-md text-on-surface transition-colors bg-surface-container-lowest" placeholder="Barcelona Airport" type="text"/>
 </div>
 </div>
 <div class="flex flex-col gap-2">
 <label class="font-label-md text-label-md text-on-surface-variant">Destination</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">location_on</span>
-<input class="w-full pl-10 pr-4 py-3 rounded-DEFAULT border border-surface-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none font-body-md text-on-surface transition-colors bg-surface-container-lowest" placeholder="Salou" type="text"/>
+<input class="w-full pl-10 pr-4 py-3 rounded border border-surface-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none font-body-md text-on-surface transition-colors bg-surface-container-lowest" placeholder="Salou" type="text"/>
 </div>
 </div>
 <div class="flex gap-4">
@@ -78,21 +86,21 @@ const bodyClass = "bg-background font-body-md text-on-surface antialiased";
 <label class="font-label-md text-label-md text-on-surface-variant">Date</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">calendar_month</span>
-<input class="w-full pl-10 pr-4 py-3 rounded-DEFAULT border border-surface-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none font-body-md text-on-surface transition-colors bg-surface-container-lowest" placeholder="27/07/2026" type="text"/>
+<input class="w-full pl-10 pr-4 py-3 rounded border border-surface-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none font-body-md text-on-surface transition-colors bg-surface-container-lowest" placeholder="27/07/2026" type="text"/>
 </div>
 </div>
 <div class="flex flex-col gap-2 w-1/2">
 <label class="font-label-md text-label-md text-on-surface-variant">Passengers</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">person</span>
-<select class="w-full pl-10 pr-4 py-3 rounded-DEFAULT border border-surface-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none font-body-md text-on-surface transition-colors bg-surface-container-lowest appearance-none">
+<select class="w-full pl-10 pr-4 py-3 rounded border border-surface-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none font-body-md text-on-surface transition-colors bg-surface-container-lowest appearance-none">
 <option>1 Adult</option>
 <option>2 Adults</option>
 </select>
 </div>
 </div>
 </div>
-<button class="w-full bg-[#EB8E02] text-on-primary font-button text-button py-4 rounded-DEFAULT hover:opacity-90 transition-opacity mt-4 shadow-sm" type="button">
+<button class="w-full bg-[#EB8E02] text-on-primary font-button text-button py-4 rounded hover:opacity-90 transition-opacity mt-4 shadow-sm" type="button">
                         SEARCH
                     </button>
 </form>

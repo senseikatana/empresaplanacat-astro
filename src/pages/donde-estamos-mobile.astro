@@ -1,14 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSiteInfo, getCanonicalUrl } from '../config/site-info';
+import { getLocale, getDictionary } from '../config/i18n';
 
 export const prerender = false;
 
-const title = "Dónde Estamos - Empresa Plana";
-const lang = "en";
+const locale = getLocale(Astro.url.searchParams.get('lang'));
+const dict = getDictionary(locale);
+const siteInfo = getSiteInfo({
+	title: dict.locationsMobile.title,
+	description: dict.locations.hero.subtitle,
+	lang: locale,
+	ogTitle: dict.locationsMobile.hero.title,
+	ogDescription: dict.locations.hero.subtitle,
+	canonicalUrl: getCanonicalUrl(Astro.url.pathname),
+});
 const bodyClass = "bg-background text-on-background antialiased min-h-screen pb-24 md:pb-0";
 ---
 
-<BaseLayout title={title} lang={lang} bodyClass={bodyClass}>
+<BaseLayout {...siteInfo} bodyClass={bodyClass}>
 <!-- TopAppBar -->
 <header class="bg-primary dark:bg-primary fixed top-0 w-full z-50 flat no shadows flex justify-between items-center px-margin-mobile w-full h-16 transition-opacity duration-200">
 <button aria-label="Menu" class="text-on-primary hover:opacity-80 p-2 -ml-2">

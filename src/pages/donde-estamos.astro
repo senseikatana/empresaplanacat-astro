@@ -1,14 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSiteInfo, getCanonicalUrl } from '../config/site-info';
+import { getLocale, getDictionary } from '../config/i18n';
 
 export const prerender = false;
 
-const title = "Dónde Estamos - Empresa Plana";
-const lang = "es";
+const locale = getLocale(Astro.url.searchParams.get('lang'));
+const dict = getDictionary(locale);
+const siteInfo = getSiteInfo({
+	title: dict.locations.title,
+	description: dict.locations.hero.subtitle,
+	lang: locale,
+	ogTitle: dict.locations.hero.title,
+	ogDescription: dict.locations.hero.subtitle,
+	canonicalUrl: getCanonicalUrl(Astro.url.pathname),
+});
 const bodyClass = "bg-background text-on-surface font-body-md antialiased";
 ---
 
-<BaseLayout title={title} lang={lang} bodyClass={bodyClass}>
+<BaseLayout {...siteInfo} bodyClass={bodyClass}>
 <!-- TopNavBar -->
 <nav class="bg-surface dark:bg-inverse-surface w-full sticky top-0 z-50 transition-shadow duration-300 shadow-ambient">
 <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">

@@ -1,14 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSiteInfo, getCanonicalUrl } from '../config/site-info';
+import { getLocale, getDictionary } from '../config/i18n';
 
 export const prerender = false;
 
-const title = "Empresa Plana - Mobile Landing Page";
-const lang = "en";
+const locale = getLocale(Astro.url.searchParams.get('lang'));
+const dict = getDictionary(locale);
+const siteInfo = getSiteInfo({
+	title: dict.mobileApp.title,
+	description: dict.home.screens.mobile.desc,
+	lang: locale,
+	ogTitle: dict.mobileApp.hero.title,
+	ogDescription: dict.home.screens.mobile.desc,
+	canonicalUrl: getCanonicalUrl(Astro.url.pathname),
+});
 const bodyClass = "bg-background text-on-background font-body-md antialiased overflow-x-hidden min-h-screen flex flex-col max-w-[480px] mx-auto shadow-2xl relative";
 ---
 
-<BaseLayout title={title} lang={lang} bodyClass={bodyClass}>
+<BaseLayout {...siteInfo} bodyClass={bodyClass}>
 <!-- Top Navigation (Desktop Only - Hidden on Mobile) -->
 <header class="hidden md:flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20 bg-surface dark:bg-inverse-surface docked full-width top-0 z-50">
 <div class="font-headline-md text-headline-md font-bold text-deep-navy dark:text-primary-fixed-dim">
@@ -21,7 +31,7 @@ const bodyClass = "bg-background text-on-background font-body-md antialiased ove
 </nav>
 <div class="flex items-center gap-stack-md">
 <button class="font-button text-button text-deep-navy dark:text-primary-fixed-dim hover:text-coastal-teal transition-colors duration-200">Contact</button>
-<button class="bg-energetic-orange text-white font-button text-button px-6 py-3 rounded-DEFAULT hover:bg-opacity-90 transition-opacity">BOOK NOW</button>
+<button class="bg-energetic-orange text-white font-button text-button px-6 py-3 rounded hover:bg-opacity-90 transition-opacity">BOOK NOW</button>
 </div>
 </header>
 <!-- Mobile App Header (Logo & Context) -->

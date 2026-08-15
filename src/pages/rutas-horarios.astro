@@ -1,14 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSiteInfo, getCanonicalUrl } from '../config/site-info';
+import { getLocale, getDictionary } from '../config/i18n';
 
 export const prerender = false;
 
-const title = "Descargas y Horarios - Empresa Plana";
-const lang = "es";
+const locale = getLocale(Astro.url.searchParams.get('lang'));
+const dict = getDictionary(locale);
+const siteInfo = getSiteInfo({
+	title: dict.routes.title,
+	description: dict.routes.hero.subtitle,
+	lang: locale,
+	ogTitle: dict.routes.hero.title,
+	ogDescription: dict.routes.hero.subtitle,
+	canonicalUrl: getCanonicalUrl(Astro.url.pathname),
+});
 const bodyClass = "bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen";
 ---
 
-<BaseLayout title={title} lang={lang} bodyClass={bodyClass}>
+<BaseLayout {...siteInfo} bodyClass={bodyClass}>
 <!-- TopNavBar Component -->
 <header class="bg-surface dark:bg-inverse-surface w-full sticky top-0 z-50 transition-colors duration-300 shadow-sm">
 <!-- Utility Bar -->
