@@ -1,14 +1,35 @@
 ---
+import "../styles/global.css";
+import type { Locale } from "../config/i18n/types";
+
 interface Props {
 	title: string;
-	lang?: string;
+	lang?: Locale;
 	bodyClass?: string;
+	description?: string;
+	author?: string;
+	keywords?: string[];
+	themeColor?: string;
+	ogTitle?: string;
+	ogDescription?: string;
+	ogImage?: string;
+	ogType?: string;
+	canonicalUrl?: string;
 }
 
 const {
 	title,
-	lang = "es",
+	lang = "ca",
 	bodyClass = "bg-background text-on-background font-body-md antialiased",
+	description,
+	author,
+	keywords,
+	themeColor,
+	ogTitle = title,
+	ogDescription = description,
+	ogImage,
+	ogType = "website",
+	canonicalUrl,
 } = Astro.props;
 ---
 
@@ -21,6 +42,16 @@ const {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		{description && <meta name="description" content={description} />}
+		{author && <meta name="author" content={author} />}
+		{keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(", ")} />}
+		{themeColor && <meta name="theme-color" content={themeColor} />}
+		{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+		<meta property="og:title" content={ogTitle} />
+		{ogDescription && <meta property="og:description" content={ogDescription} />}
+		<meta property="og:type" content={ogType} />
+		{ogImage && <meta property="og:image" content={ogImage} />}
+		{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -31,131 +62,6 @@ const {
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
 			rel="stylesheet"
 		/>
-		<script is:inline src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-		<script is:inline>
-			tailwind.config = {
-				darkMode: "class",
-				theme: {
-					extend: {
-						colors: {
-							"background": "#f8f9fa",
-							"on-background": "#191c1d",
-							"surface": "#f8f9fa",
-							"surface-dim": "#d9dadb",
-							"surface-bright": "#f8f9fa",
-							"surface-container-lowest": "#ffffff",
-							"surface-container-low": "#f3f4f5",
-							"surface-container": "#edeeef",
-							"surface-container-high": "#e7e8e9",
-							"surface-container-highest": "#e1e3e4",
-							"on-surface": "#191c1d",
-							"on-surface-variant": "#434652",
-							"inverse-surface": "#2e3132",
-							"inverse-on-surface": "#f0f1f2",
-							"outline": "#747783",
-							"outline-variant": "#c4c6d4",
-							"surface-tint": "#335ab1",
-							"surface-variant": "#e1e3e4",
-							"primary": "#002563",
-							"on-primary": "#ffffff",
-							"primary-container": "#013990",
-							"on-primary-container": "#87a8ff",
-							"inverse-primary": "#b2c5ff",
-							"secondary": "#00696f",
-							"on-secondary": "#ffffff",
-							"secondary-container": "#78f5ff",
-							"on-secondary-container": "#007076",
-							"tertiary": "#3f2200",
-							"on-tertiary": "#ffffff",
-							"tertiary-container": "#5d3500",
-							"on-tertiary-container": "#f3940f",
-							"error": "#ba1a1a",
-							"on-error": "#ffffff",
-							"error-container": "#ffdad6",
-							"on-error-container": "#93000a",
-							"primary-fixed": "#dae2ff",
-							"primary-fixed-dim": "#b2c5ff",
-							"on-primary-fixed": "#001847",
-							"on-primary-fixed-variant": "#134198",
-							"secondary-fixed": "#78f5ff",
-							"secondary-fixed-dim": "#57d8e2",
-							"on-secondary-fixed": "#002022",
-							"on-secondary-fixed-variant": "#004f54",
-							"tertiary-fixed": "#ffdcbd",
-							"tertiary-fixed-dim": "#ffb86d",
-							"on-tertiary-fixed": "#2c1600",
-							"on-tertiary-fixed-variant": "#693c00",
-							"deep-navy": "#013990",
-							"coastal-teal": "#13AEB8",
-							"energetic-orange": "#EB8E02",
-							"surface-gray": "#F1F3F5",
-							"text-main": "#1A1C1E",
-						},
-						borderRadius: {
-							DEFAULT: "0.25rem",
-							lg: "0.5rem",
-							xl: "0.75rem",
-							full: "9999px",
-						},
-						boxShadow: {
-							ambient: "0px 4px 20px rgba(1, 57, 144, 0.08)",
-						},
-						spacing: {
-							"container-max": "1280px",
-							"gutter": "24px",
-							"margin-mobile": "16px",
-							"margin-desktop": "48px",
-							"stack-sm": "8px",
-							"stack-md": "16px",
-							"stack-lg": "32px",
-						},
-						fontFamily: {
-							"display-lg": ["Geist", "sans-serif"],
-							"headline-lg": ["Geist", "sans-serif"],
-							"headline-lg-mobile": ["Geist", "sans-serif"],
-							"headline-md": ["Geist", "sans-serif"],
-							"body-lg": ["Geist", "sans-serif"],
-							"body-md": ["Geist", "sans-serif"],
-							"label-md": ["Geist", "sans-serif"],
-							"button": ["Geist", "sans-serif"],
-						},
-						fontSize: {
-							"display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
-							"headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }],
-							"headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }],
-							"headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
-							"body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
-							"body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
-							"label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }],
-							"button": ["16px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }],
-						},
-					},
-				},
-			};
-		</script>
-		<style is:inline type="text/tailwindcss">
-			@layer utilities {
-				.ambient-shadow {
-					box-shadow: 0px 4px 20px rgba(1, 57, 144, 0.08);
-				}
-				.glass-panel {
-					@apply bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/20;
-				}
-				.bg-pattern {
-					background-image: radial-gradient(#c4c6d4 1px, transparent 1px);
-					background-size: 20px 20px;
-				}
-			}
-		</style>
-		<style is:inline>
-			.material-symbols-outlined {
-				font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-			}
-			.icon-filled,
-			.icon-fill {
-				font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-			}
-		</style>
 	</head>
 	<body class={bodyClass}>
 		<slot />

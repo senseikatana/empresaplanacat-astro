@@ -1,14 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSiteInfo, getCanonicalUrl } from '../config/site-info';
+import { getLocale, getDictionary } from '../config/i18n';
 
 export const prerender = false;
 
-const title = "Empresa Plana - Homepage";
-const lang = "en";
+const locale = getLocale(Astro.url.searchParams.get('lang'));
+const dict = getDictionary(locale);
+const siteInfo = getSiteInfo({
+	title: dict.homeVariant1.title,
+	description: dict.home.screens.variant1.desc,
+	lang: locale,
+	canonicalUrl: getCanonicalUrl(Astro.url.pathname),
+});
 const bodyClass = "bg-surface text-on-surface min-h-screen flex flex-col";
 ---
 
-<BaseLayout title={title} lang={lang} bodyClass={bodyClass}>
+<BaseLayout {...siteInfo} bodyClass={bodyClass}>
 <!-- TopNav - Utility Bar -->
 <div class="bg-surface-container-lowest border-b border-surface-variant hidden md:block">
 <div class="max-w-container-max mx-auto px-margin-desktop py-2 flex justify-end items-center gap-gutter font-label-md text-label-md text-on-surface-variant">

@@ -53,6 +53,11 @@ colors:
   energetic-orange: '#EB8E02'
   surface-gray: '#F1F3F5'
   text-main: '#1A1C1E'
+brand:
+  primary: '#013990'
+  secondary: '#13aeb8'
+  tertiary: '#eb8e02'
+  neutral: '#f8f9fa'
 typography:
   display-lg:
     fontFamily: Geist
@@ -121,6 +126,18 @@ The visual identity of the design system balances the heritage of a long-standin
 The design narrative is built on "Efficient Mobility." This is achieved through a structured, information-first layout that prioritizes ease of booking and schedule lookup. Visuals should feature high-quality photography of scenic coastal routes and the modern fleet, grounded by a sophisticated navy blue palette. The interface uses generous whitespace and a "Rounded" shape language to feel approachable and accessible to a wide demographic, from daily commuters to international tourists.
 
 ## Colors
+
+### Brand Palette
+
+| Role | Token | Hex | CSS custom property |
+|---|---|---|---|
+| Primary | `deep-navy` | `#013990` | `--brand-primary` |
+| Secondary | `coastal-teal` | `#13aeb8` | `--brand-secondary` |
+| Tertiary | `energetic-orange` | `#eb8e02` | `--brand-tertiary` |
+| Neutral | `background` | `#f8f9fa` | `--brand-neutral` |
+
+The brand colors are also exposed as CSS custom properties in
+`src/styles/global.css` (`:root`) and consumed by the Tailwind theme.
 
 The color palette is anchored by **Deep Navy Blue**, representing the brand's established authority and professionalism. **Coastal Teal** is used as a secondary highlight to bring a modern, Mediterranean freshness to the UI, particularly in supportive icons or secondary progress indicators.
 

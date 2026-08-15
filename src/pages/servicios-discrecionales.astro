@@ -1,14 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSiteInfo, getCanonicalUrl } from '../config/site-info';
+import { getLocale, getDictionary } from '../config/i18n';
 
 export const prerender = false;
 
-const title = "Servicios Discrecionales - Empresa Plana";
-const lang = "es";
+const locale = getLocale(Astro.url.searchParams.get('lang'));
+const dict = getDictionary(locale);
+const siteInfo = getSiteInfo({
+	title: dict.discretionary.title,
+	description: dict.discretionary.hero.subtitle,
+	lang: locale,
+	ogTitle: dict.discretionary.hero.title,
+	ogDescription: dict.discretionary.hero.subtitle,
+	canonicalUrl: getCanonicalUrl(Astro.url.pathname),
+});
 const bodyClass = "bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen";
 ---
 
-<BaseLayout title={title} lang={lang} bodyClass={bodyClass}>
+<BaseLayout {...siteInfo} bodyClass={bodyClass}>
 <!-- Utility Bar -->
 <div class="bg-surface-container-lowest border-b border-surface-variant py-2 px-margin-mobile md:px-margin-desktop text-label-md font-label-md text-on-surface-variant flex justify-end items-center gap-4 hidden md:flex">
 <span>CA | ES | EN</span>

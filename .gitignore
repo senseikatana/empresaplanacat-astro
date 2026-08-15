@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# bus tracking storage
+.data/
+
 # macOS-specific files
 .DS_Store
 
