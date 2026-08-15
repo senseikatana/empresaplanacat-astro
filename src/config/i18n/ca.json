@@ -85,6 +85,26 @@
       "submit": "CERCAR LÍNIES",
       "disclaimer": "* El compliment d'aquests horaris està condicionat a la fluïdesa del trànsit."
     },
+    "results": {
+      "title": "Resultats de la cerca",
+      "summaryLabel": "Resultats per a",
+      "directTitle": "Rutes directes",
+      "transfersTitle": "Rutes amb transbord",
+      "hubLabel": "Transbord a",
+      "legLabel": "Tram",
+      "firstDeparture": "Primera sortida",
+      "lastDeparture": "Última sortida",
+      "departuresLabel": "sortides",
+      "stopsLabel": "Parades del recorregut",
+      "downloadPdf": "Descarregar PDF",
+      "moreDepartures": "+ {n} sortides més",
+      "emptyTitle": "No s'han trobat resultats",
+      "emptyBody": "No trobem línies que connectin aquestes localitats amb els criteris indicats.",
+      "emptyHint": "Prova amb altres localitats o activa la cerca amb transbords.",
+      "missingSelection": "Selecciona origen i destinació per cercar.",
+      "databaseError": "No s'ha pogut connectar amb la base de dades d'horaris.",
+      "searchingInfo": "Mostrant sortides d'exemple. La data indicada és orientativa."
+    },
     "origins": {
       "barcelonaAirport": "Aeroport de Barcelona",
       "reusAirport": "Aeroport de Reus",
@@ -128,6 +148,19 @@
     "banner": {
       "title": "Accés de patinets elèctrics als autobusos",
       "body": "Seguint les instruccions de l'Autoritat Territorial de Mobilitat i per motius de seguretat, no es podrà accedir ni viatjar en el transport públic amb patinets elèctrics i altres vehicles elèctrics de mobilitat personal, ni tan sols plegats."
+    },
+    "groups": {
+      "special": "Punts d'interès",
+      "altCamp": "Alt Camp",
+      "baixCamp": "Baix Camp",
+      "baixEbre": "Baix Ebre",
+      "baixPenedes": "Baix Penedès",
+      "concaBarbera": "Conca de Barberà",
+      "montsia": "Montsià",
+      "priorat": "Priorat",
+      "riberaEbre": "Ribera d'Ebre",
+      "tarragones": "Tarragonès",
+      "terraAlta": "Terra Alta"
     }
   },
   "mobileApp": {

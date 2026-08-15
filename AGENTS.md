@@ -9,6 +9,10 @@ exported as HTML into `stitch-export/`, then transformed into Astro pages.
 - Astro 7 + `@astrojs/node` adapter + `@astrojs/react` (islands)
 - Package manager: **bun** (`bun.lock` present)
 - Node >= 22.12
+- Database: **Turso** (libsql) via `@libsql/client` + **Drizzle ORM**
+  (`drizzle-orm` + `drizzle-kit`), validation with **zod v4**, auth tokens with
+  **jose** (HS256 JWT in an httpOnly cookie). Credentials in `.env`
+  (`TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN`, `AUTH_SECRET`).
 - Styling: **Tailwind CSS v4 build-time** via `@tailwindcss/vite` (no CDN) +
   Geist + Material Symbols. Theme lives in `src/styles/global.css` (`@theme`
   block mirroring `src/assets/DESIGN.md`; brand colors exposed as CSS custom
@@ -28,6 +32,9 @@ Run everything from this directory:
 - `astro.config.mjs` sets `output: "server"` with the Node adapter
   (`mode: "standalone"`). Astro 7 removed `output: "hybrid"`; `server` renders
   every route on request.
+- `security: { checkOrigin: false }` — the API endpoints are consumed by
+  non-browser clients (no `Origin` header). CSRF is mitigated by the session
+  cookie's `sameSite: "lax"` (browsers don't send it on cross-site POSTs).
 - All pages declare `export const prerender = false;` (redundant but explicit
   in server mode). The only client-side code is the `BusTrackingPanel` React
   island (`client:load`).
@@ -60,6 +67,52 @@ Canonical tokens live in `src/assets/DESIGN.md` (mirror of the Stitch
   `ca.json` (406 keys, identical shape). Includes pages, about, full legal
   texts (notice, cookies, privacy) and the bus-tracking UI, formerly scraped
   into `src/data/`.
+
+## Database (Turso + Drizzle)
+
+- `db/schema.ts` — Drizzle schema: `lines`, `schedules` (route timetables,
+  stops denormalized in `stops_json`) and `usuarios` (name, full_name, phone,
+  email unique, passkey_hash, username unique, role enum
+  `client|worker|admin`, created_at). `db/schema.sql` is the legacy bootstrap
+  for `lines`/`schedules` (idempotent `IF NOT EXISTS`); new tables go through
+  Drizzle migrations in `drizzle/`.
+- `drizzle.config.ts` — `dialect: "turso"`, reads `.env`. Gotcha:
+  `drizzle-kit migrate` hangs against Turso under bun; apply migrations via
+  the Turso HTTP `/v2/pipeline` API (statements `{ q, params }`) and record
+  the sha256 hash of the file in `__drizzle_migrations`. `drizzle-kit
+  generate` works normally.
+- `src/lib/db.ts` — exports `client` (raw libsql) and `db` (drizzle).
+- Seed scripts (`bun scripts/seed.mjs`, `bun scripts/seed-users.mjs`): scrape
+  the real site (`empresaplana.cat/descargas`) in BOTH directions per line
+  (seasonal lines return 0 rows out of season, so the seeder tries
+  15/08/2026, 15/09/2026 and 15/11/2026 and keeps the richest response). Line
+  names come from the resolved PDF filename. Idempotent (DELETE + insert).
+
+## Search & results
+
+- `src/lib/search.ts` — `searchRoutes(origin, destination, withTransfers)`:
+  accent-insensitive match of towns inside `stops_json` (order matters:
+  origin must appear before destination). Returns per-line summaries
+  (stops, departures capped at 24, first/last, PDF) + transfer options via
+  shared hub towns (cap 6).
+- `/rutas-horarios` posts to itself (`#results` anchor) and renders
+  `RouteAccordion` / `TransferAccordion` components. Form defaults:
+  Tarragona → Salou.
+
+## Auth & users
+
+- `src/lib/passkey.ts` — scrypt hashing (`salt:hash`, node:crypto, no deps).
+- `src/lib/auth.ts` — JWT session via `jose` (HS256, `AUTH_SECRET`, 7d) in
+  the `ep_session` httpOnly cookie; `authorize(cookies, role?)` guard returns
+  a ready-made 401/403 `Response`.
+- `src/lib/validation/users.ts` — zod v4 schemas (create/update/login);
+  errors map to `{ error, issues }`. Unique conflicts are pre-checked →
+  `{ error: "conflict", field }` 409.
+- API: `POST /api/auth/login|logout`, `GET /api/auth/me`, `GET|POST
+  /api/users` (admin), `GET|PATCH|DELETE /api/users/[id]` (admin; can't
+  delete yourself). `passkey_hash` is never exposed.
+- Demo users (seed-users): `admin/ADMIN1234`, `worker/WORKER12`,
+  `client/CLIENT01`. Google Auth is planned as a future addition.
 
 ## Bus tracking (Glovo-style)
 

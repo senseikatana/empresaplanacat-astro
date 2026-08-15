@@ -85,6 +85,26 @@
       "submit": "BUSCAR LÍNEAS",
       "disclaimer": "* El cumplimiento de estos horarios están condicionados a la fluidez del tráfico."
     },
+    "results": {
+      "title": "Resultados de búsqueda",
+      "summaryLabel": "Resultados para",
+      "directTitle": "Rutas directas",
+      "transfersTitle": "Rutas con transbordo",
+      "hubLabel": "Transbordo en",
+      "legLabel": "Tramo",
+      "firstDeparture": "Primera salida",
+      "lastDeparture": "Última salida",
+      "departuresLabel": "salidas",
+      "stopsLabel": "Paradas del recorrido",
+      "downloadPdf": "Descargar PDF",
+      "moreDepartures": "+ {n} salidas más",
+      "emptyTitle": "No se han encontrado resultados",
+      "emptyBody": "No encontramos líneas que conecten esas localidades con los criterios indicados.",
+      "emptyHint": "Prueba con otras localidades o activa la búsqueda con transbordos.",
+      "missingSelection": "Selecciona origen y destino para buscar.",
+      "databaseError": "No se pudo conectar con la base de datos de horarios.",
+      "searchingInfo": "Mostrando salidas de ejemplo. La fecha indicada es orientativa."
+    },
     "origins": {
       "barcelonaAirport": "Aeroport de Barcelona",
       "reusAirport": "Aeroport de Reus",
@@ -128,6 +148,19 @@
     "banner": {
       "title": "Acceso de patinetes eléctricos en los autobuses",
       "body": "Siguiendo las instrucciones de Autoridad Territorial de Movilidad y por motivos de seguridad, no se podrá acceder ni viajar en el transporte público con patinetes eléctricos y otros vehículos eléctricos de movilidad personal, ni siquiera plegados."
+    },
+    "groups": {
+      "special": "Puntos de interés",
+      "altCamp": "Alt Camp",
+      "baixCamp": "Baix Camp",
+      "baixEbre": "Bajo Ebro",
+      "baixPenedes": "Bajo Penedés",
+      "concaBarbera": "Cuenca de Barberá",
+      "montsia": "Montsiá",
+      "priorat": "Priorato",
+      "riberaEbre": "Ribera de Ebro",
+      "tarragones": "Tarragonés",
+      "terraAlta": "Tierra Alta"
     }
   },
   "mobileApp": {

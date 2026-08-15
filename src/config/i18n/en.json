@@ -85,6 +85,26 @@
       "submit": "SEARCH LINES",
       "disclaimer": "* Compliance with these times is subject to traffic flow."
     },
+    "results": {
+      "title": "Search results",
+      "summaryLabel": "Results for",
+      "directTitle": "Direct routes",
+      "transfersTitle": "Routes with transfer",
+      "hubLabel": "Transfer at",
+      "legLabel": "Leg",
+      "firstDeparture": "First departure",
+      "lastDeparture": "Last departure",
+      "departuresLabel": "departures",
+      "stopsLabel": "Route stops",
+      "downloadPdf": "Download PDF",
+      "moreDepartures": "+ {n} more departures",
+      "emptyTitle": "No results found",
+      "emptyBody": "We couldn't find lines connecting those towns with the selected criteria.",
+      "emptyHint": "Try different towns or enable the transfer search.",
+      "missingSelection": "Select origin and destination to search.",
+      "databaseError": "Could not connect to the timetable database.",
+      "searchingInfo": "Showing sample departures. The selected date is indicative."
+    },
     "origins": {
       "barcelonaAirport": "Barcelona Airport",
       "reusAirport": "Reus Airport",
@@ -128,6 +148,19 @@
     "banner": {
       "title": "Access of electric scooters on buses",
       "body": "Following the instructions of the Territorial Mobility Authority and for safety reasons, you may not board or travel on public transport with electric scooters or other personal electric mobility vehicles, even when folded."
+    },
+    "groups": {
+      "special": "Points of interest",
+      "altCamp": "Alt Camp",
+      "baixCamp": "Baix Camp",
+      "baixEbre": "Baix Ebre",
+      "baixPenedes": "Baix Penedès",
+      "concaBarbera": "Conca de Barberà",
+      "montsia": "Montsià",
+      "priorat": "Priorat",
+      "riberaEbre": "Ribera d'Ebre",
+      "tarragones": "Tarragonès",
+      "terraAlta": "Terra Alta"
     }
   },
   "mobileApp": {

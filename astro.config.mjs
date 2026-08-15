@@ -9,6 +9,9 @@ export default defineConfig({
 	output: "server",
 	adapter: node({ mode: "standalone" }),
 	integrations: [react()],
+	security: {
+		checkOrigin: false,
+	},
 	prefetch: {
 		prefetchAll: true,
 		defaultStrategy: "hover",

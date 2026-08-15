@@ -77,6 +77,27 @@ export interface RoutesSearch {
 	disclaimer: string;
 }
 
+export interface RoutesResults {
+	title: string;
+	summaryLabel: string;
+	directTitle: string;
+	transfersTitle: string;
+	hubLabel: string;
+	legLabel: string;
+	firstDeparture: string;
+	lastDeparture: string;
+	departuresLabel: string;
+	stopsLabel: string;
+	downloadPdf: string;
+	moreDepartures: string;
+	emptyTitle: string;
+	emptyBody: string;
+	emptyHint: string;
+	missingSelection: string;
+	databaseError: string;
+	searchingInfo: string;
+}
+
 export interface RoutesOrigins {
 	barcelonaAirport: string;
 	reusAirport: string;
@@ -84,6 +105,20 @@ export interface RoutesOrigins {
 	salou: string;
 	cambrils: string;
 	portAventura: string;
+}
+
+export interface RoutesGroups {
+	special: string;
+	altCamp: string;
+	baixCamp: string;
+	baixEbre: string;
+	baixPenedes: string;
+	concaBarbera: string;
+	montsia: string;
+	priorat: string;
+	riberaEbre: string;
+	tarragones: string;
+	terraAlta: string;
 }
 
 export interface RouteLineCard {
@@ -118,7 +153,9 @@ export interface Routes {
 	title: string;
 	hero: RoutesHero;
 	search: RoutesSearch;
+	results: RoutesResults;
 	origins: RoutesOrigins;
+	groups: RoutesGroups;
 	lines: RoutesLines;
 	banner: RoutesBanner;
 }
