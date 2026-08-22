@@ -1,0 +1,22 @@
+{
+  "extends": "./node_modules/astro/tsconfigs/strict.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+
+    "paths": {
+      "@/*": ["/src/*"],
+      "@config/*": ["/src/config/*"],
+      "@layouts/*": ["/src/layouts/*"],
+      "@pages/*": ["/src/pages/*"],
+      "@styles/*": ["/src/styles/*"],
+      "@utils/*": ["/src/utils/*"],
+      "@components/*": ["/src/components/*"],
+      "@hooks/*": ["/src/hooks/*"],
+      "@i18n/*": ["/src/config/i18n/*"],
+      "@interfaces/*": ["/src/interfaces/*"]
+    }
+  },
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
+}
