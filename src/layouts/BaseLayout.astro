@@ -3,12 +3,14 @@
 import type { SiteInfoProps } from "@/interfaces";
 import "@/styles/global.css";
 
+interface Props extends SiteInfoProps {}
+
 const {
   title,
   lang = "es",
   bodyClass = "bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col",
   description = "",
-  author = Astro.generated?.metadata?.author || "",
+  author = "",
   keywords,
   themeColor,
   ogTitle = title,
@@ -16,7 +18,7 @@ const {
   ogImage,
   ogType = "website",
   canonicalUrl,
-}: SiteInfoProps = Astro.props;
+}: Props = Astro.props;
 ---
 
 <!doctype html>

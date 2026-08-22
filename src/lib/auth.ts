@@ -1,5 +1,5 @@
-import { SignJWT, jwtVerify } from "jose";
 import type { AstroCookies } from "astro";
+import { jwtVerify, SignJWT } from "jose";
 import type { UsuarioRole } from "@/db/schema";
 import type { SessionUser } from "@/interfaces/auth";
 

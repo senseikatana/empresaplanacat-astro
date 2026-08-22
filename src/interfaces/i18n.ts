@@ -1,9 +1,9 @@
 import type { About } from "@/interfaces/about";
+import type { HomeVariant1, HomeVariant2 } from "@/interfaces/booking";
 import type { BusTracking } from "@/interfaces/bus-tracking";
 import type { Common, Locale } from "@/interfaces/common";
 import type { Discretionary } from "@/interfaces/discretionary";
 import type { Home } from "@/interfaces/home";
-import type { HomeVariant1, HomeVariant2 } from "@/interfaces/booking";
 import type { Legal } from "@/interfaces/legal";
 import type { Locations, LocationsMobile } from "@/interfaces/locations";
 import type { MobileApp } from "@/interfaces/mobile-app";

@@ -1,14 +1,14 @@
 import type { APIRoute } from "astro";
 import { eq, or } from "drizzle-orm";
-import { USUARIO_ROLES, usuarios, type UsuarioRole } from "@/db/schema";
-import { db } from "@/lib/db";
+import { USUARIO_ROLES, type UsuarioRole, usuarios } from "@/db/schema";
 import { authorize } from "@/lib/auth";
+import { db } from "@/lib/db";
 import { hashPasskey } from "@/lib/passkey";
+import { publicUser } from "@/lib/users";
 import {
 	createUserSchema,
 	formatValidationError,
 } from "@/lib/validation/users";
-import { publicUser } from "@/lib/users";
 
 export const prerender = false;
 

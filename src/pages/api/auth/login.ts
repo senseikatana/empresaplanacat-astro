@@ -1,14 +1,11 @@
 import type { APIRoute } from "astro";
 import { eq } from "drizzle-orm";
 import { usuarios } from "@/db/schema";
-import { db } from "@/lib/db";
 import { setSessionCookie, signSessionToken } from "@/lib/auth";
+import { db } from "@/lib/db";
 import { verifyPasskey } from "@/lib/passkey";
-import {
-	loginSchema,
-	formatValidationError,
-} from "@/lib/validation/users";
 import { publicUser } from "@/lib/users";
+import { formatValidationError, loginSchema } from "@/lib/validation/users";
 
 export const prerender = false;
 

@@ -1,12 +1,17 @@
 ---
-import type { LineSummary } from "@/interfaces/search";
+import type { LineSummary, Departure } from "@/interfaces/search";
 import type { RoutesResults } from "@/interfaces";
 
 interface Props {
-	line: LineSummary;
-	t: RoutesResults;
-	index?: number;
-	legLabel?: string | null;
+  line: LineSummary;
+  t: RoutesResults;
+  index?: number;
+  legLabel?: string | null;
+}
+
+interface DepartureWithTimes extends Departure {
+  departureTime: string;
+  arrivalTime: string;
 }
 
 const { line, t, index = 0, legLabel = null } = Astro.props;
@@ -57,9 +62,10 @@ const more = line.departureCount - line.departures.length;
             >{line.lastDeparture}</span
           >
         </p>
-        <p class="font-body-md text-body-md text-on-surface-variant"
-          >{line.departureCount} {t.departuresLabel}</p
-        >
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          {line.departureCount}
+          {t.departuresLabel}
+        </p>
       </div>
       {
         line.pdfUrl && (
@@ -86,20 +92,21 @@ const more = line.departureCount - line.departures.length;
     <div>
       <h4
         class="font-label-md text-label-md text-outline mb-3 uppercase tracking-wide"
-        >{t.stopsLabel}</h4
       >
+        {t.stopsLabel}
+      </h4>
       <ol
         class="flex flex-col gap-3 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/30"
       >
         {
-          line.stops.map((stop, i) => (
+          line.stops.map((stop, index) => (
             <li class="flex items-start gap-3 relative">
               <span
                 class:list={[
                   "w-6 h-6 rounded-full bg-surface-bright border-2 flex-shrink-0 z-10 mt-0.5",
-                  i === 0
+                  index === 0
                     ? "border-coastal-teal"
-                    : i === line.stops.length - 1
+                    : index === line.stops.length - 1
                       ? "border-energetic-orange"
                       : "border-outline-variant",
                 ]}
@@ -108,7 +115,7 @@ const more = line.departureCount - line.departures.length;
                 <span
                   class:list={[
                     "font-body-md text-body-md",
-                    i === 0 || i === line.stops.length - 1
+                    index === 0 || index === line.stops.length - 1
                       ? "text-deep-navy font-semibold"
                       : "text-on-surface",
                   ]}

@@ -1,6 +1,5 @@
 import { asc } from "drizzle-orm";
-import { lines, schedules, lineConnections } from "@/db/schema";
-import { db } from "@/lib/db";
+import { lineConnections, lines, schedules } from "@/db/schema";
 import type {
 	Departure,
 	LineSummary,
@@ -10,6 +9,7 @@ import type {
 	ThroughPair,
 	TransferOption,
 } from "@/interfaces/search";
+import { db } from "@/lib/db";
 
 const MAX_DEPARTURES_SHOWN = 24;
 const MAX_DEPARTURES_PER_LEG = 6;

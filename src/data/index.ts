@@ -1,7 +1,3 @@
-import contactData from "./contact.json";
-import popularLinesData from "./popular-lines.json";
-import quoteFormData from "./quote-form.json";
-import servicesData from "./services.json";
 import type {
 	Contact,
 	PopularLine,
@@ -11,6 +7,10 @@ import type {
 	ServicesData,
 	SiteLocale,
 } from "@/data/types";
+import contactData from "./contact.json";
+import popularLinesData from "./popular-lines.json";
+import quoteFormData from "./quote-form.json";
+import servicesData from "./services.json";
 
 export type {
 	Contact,
