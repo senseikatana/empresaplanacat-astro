@@ -1,5 +1,5 @@
 import stopsData from "./stops.json";
-import type { Comarca, TimeRange } from "../interfaces/towns";
+import type { Comarca, TimeRange } from "@/interfaces/towns";
 
 export const STOPS: string[] = stopsData.stops;
 

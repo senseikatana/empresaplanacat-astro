@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import type { BusTracking } from "../interfaces/types";
-import type { LineStats, ReportAction } from "../interfaces/tracking-store";
+import type { BusTracking } from "@/interfaces";
+import type { LineStats, ReportAction } from "@/interfaces/tracking-store";
 
 interface StopInfo {
 	id: string;

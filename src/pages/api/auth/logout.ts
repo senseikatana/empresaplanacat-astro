@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { clearSessionCookie } from "../../../lib/auth";
+import { clearSessionCookie } from "@/lib/auth";
 
 export const prerender = false;
 

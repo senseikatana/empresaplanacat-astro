@@ -1,32 +1,4 @@
-export type Locale =
-	| "ca"
-	| "es"
-	| "en"
-	| "fr"
-	| "de"
-	| "it"
-	| "pt"
-	| "nl"
-	| "sv"
-	| "no"
-	| "da"
-	| "fi"
-	| "pl"
-	| "cs"
-	| "sk"
-	| "hu"
-	| "ro"
-	| "bg"
-	| "el"
-	| "tr"
-	| "ru"
-	| "uk"
-	| "ar"
-	| "he"
-	| "ja"
-	| "ko"
-	| "zh-CN"
-	| "zh-TW";
+export type Locale = "ca" | "es" | "en";
 export interface CommonNav {
 	services: string;
 	locations: string;

@@ -1,13 +1,13 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import TownSelect from "../components/TownSelect.astro";
-import RouteAccordion from "../components/RouteAccordion.astro";
-import TransferAccordion from "../components/TransferAccordion.astro";
-import ThroughAccordion from "../components/ThroughAccordion.astro";
-import { TIME_RANGES } from "../data/towns";
-import { searchRoutes } from "../lib/search";
-import { getSiteInfo, getCanonicalUrl } from "../config/site-info";
-import { getLocale, getDictionary } from "../config/i18n";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import TownSelect from "@/components/TownSelect.astro";
+import RouteAccordion from "@/components/RouteAccordion.astro";
+import TransferAccordion from "@/components/TransferAccordion.astro";
+import ThroughAccordion from "@/components/ThroughAccordion.astro";
+import { TIME_RANGES } from "@/data/towns";
+import { searchRoutes } from "@/lib/search";
+import { getSiteInfo, getCanonicalUrl } from "@/config/site-info";
+import { getLocale, getDictionary } from "@/config/i18n";
 
 export const prerender = false;
 

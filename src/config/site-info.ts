@@ -1,4 +1,4 @@
-import type { Locale, SiteInfoProps } from "../interfaces";
+import type { Locale, SiteInfoProps } from "@/interfaces";
 
 const SITE_BASE_URL = "https://empresaplana.cat";
 

@@ -1,16 +1,16 @@
-import type { Locale } from "./common";
+import type { Locale } from "@/interfaces/common";
 
-export interface MetatagsProps {
+export interface SiteInfoProps {
 	title: string;
-	lang?: Locale | string;
-	bodyClass?: string;
 	description?: string;
-	author?: string;
-	keywords?: string[];
-	themeColor?: string;
+	lang?: Locale;
+	bodyClass?: string;
 	ogTitle?: string;
 	ogDescription?: string;
 	ogImage?: string;
 	ogType?: string;
 	canonicalUrl?: string;
+	author?: string;
+	keywords?: string[];
+	themeColor?: string;
 }

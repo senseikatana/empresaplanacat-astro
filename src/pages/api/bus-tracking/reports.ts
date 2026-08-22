@@ -1,11 +1,11 @@
 import type { APIRoute } from "astro";
-import type { ReportAction } from "../../../interfaces/tracking-store";
+import type { ReportAction } from "@/interfaces/tracking-store";
 import {
 	addReport,
 	getLineStats,
 	listReports,
 	REPORT_ACTIONS,
-} from "../../../lib/tracking-store";
+} from "@/lib/tracking-store";
 
 export const prerender = false;
 

@@ -1,24 +1,22 @@
 ---
 /* ? Global Styles */
-import "../styles/global.css";
-
-// ? Types To Languages and Other Configurations
-import type { MetatagsProps } from "../interfaces/layout";
+import type { SiteInfoProps } from "@/interfaces";
+import "@/styles/global.css";
 
 const {
-	title,
-	lang = "es",
-	bodyClass = "bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col",
-	description = "",
-	author = Astro.generated?.metadata?.author || "",
-	keywords,
-	themeColor,
-	ogTitle = title,
-	ogDescription = description,
-	ogImage,
-	ogType = "website",
-	canonicalUrl,
-}: MetatagsProps = Astro.props;
+  title,
+  lang = "es",
+  bodyClass = "bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col",
+  description = "",
+  author = Astro.generated?.metadata?.author || "",
+  keywords,
+  themeColor,
+  ogTitle = title,
+  ogDescription = description,
+  ogImage,
+  ogType = "website",
+  canonicalUrl,
+}: SiteInfoProps = Astro.props;
 ---
 
 <!doctype html>

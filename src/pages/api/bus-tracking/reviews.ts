@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { addReview, listReviews } from "../../../lib/tracking-store";
+import { addReview, listReviews } from "@/lib/tracking-store";
 
 export const prerender = false;
 

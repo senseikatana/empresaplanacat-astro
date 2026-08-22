@@ -1,4 +1,4 @@
-import type { RoutesGroups } from "./routes";
+import type { RoutesGroups } from "@/interfaces/routes";
 
 export type ComarcaId = Exclude<keyof RoutesGroups, "special">;
 

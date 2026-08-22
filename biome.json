@@ -1,77 +1,40 @@
 {
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": true,
-    "ignore": [],
-    "attributePosition": "auto",
-    "indentStyle": "tab",
-    "indentWidth": 4,
-    "lineWidth": 80,
-    "lineEnding": "lf"
-  },
-  "javascript": {
-    "formatter": {
-      "arrowParentheses":"always",
-      "bracketSameLine": true,
-      "bracketSpacing": true,
-      "delimiterSpacing": false,
-      "jsxQuoteStyle": "double",
-      "quoteProperties": "as-needed",
-      "semicolons": "always",
-      "trailingCommas": "all"
-    }
-  },
-  "json": {
-    "formatter": {
-      "trailingCommas": "none",
-      "bracketSameLine": true,
-      "bracketSpacing": true,
-      "quoteProperties": "as-needed"
-    }
-  },
-
-  "typescript": {
-    "formatter": {
-      "arrowParentheses":"always",
-      "bracketSameLine": true,
-      "bracketSpacing": true,
-      "delimiterSpacing": false,
-      "jsxQuoteStyle": "double",
-      "quoteProperties": "as-needed",
-      "semicolons": "always",
-      "trailingCommas": "all"
-    }
-  }, 
-  "astro": {
-    "formatter": {
-      "trailingCommas": "all",
-      "bracketSameLine": true,
-      "bracketSpacing": true,
-      "quoteProperties": "as-needed"
-    }
-  },
-  "css": {
-    "formatter": {
-      "trailingCommas": "all",
-      "bracketSameLine": true,
-      "bracketSpacing": true,
-      "quoteProperties": "as-needed"
-    }
-  },
-  "scss": {
-    "formatter": {
-      "trailingCommas": "all",
-      "bracketSameLine": true,
-      "bracketSpacing": true,
-      "quoteProperties": "as-needed"
-    }
-  },
-  "markdown": {
-    "formatter": {
-      "trailingCommas": "all",
-      "bracketSameLine": true,
-      "bracketSpacing": true,
-      "quoteProperties": "as-needed"
-    }
-  }
+	"$schema": "https://biomejs.dev/schemas/2.5.10/schema.json",
+	"files": {
+		"includes": [
+			"src/**/*.ts",
+			"src/**/*.tsx",
+			"scripts/**/*.mjs",
+			"scripts/**/*.js",
+			"db/**/*.ts",
+			"astro.config.mjs",
+			"drizzle.config.ts",
+			"index.ts",
+			"package.json",
+			"tsconfig.json",
+			"biome.json"
+		]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"preset": "recommended"
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"semicolons": "always",
+			"trailingCommas": "all"
+		}
+	},
+	"json": {
+		"formatter": {
+			"trailingCommas": "none"
+		}
+	}
 }

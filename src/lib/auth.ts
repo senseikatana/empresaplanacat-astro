@@ -1,7 +1,7 @@
 import { SignJWT, jwtVerify } from "jose";
 import type { AstroCookies } from "astro";
-import type { UsuarioRole } from "../db/schema";
-import type { SessionUser } from "../interfaces/auth";
+import type { UsuarioRole } from "@/db/schema";
+import type { SessionUser } from "@/interfaces/auth";
 
 const SESSION_COOKIE = "ep_session";
 const SESSION_MAX_AGE = 60 * 60 * 24 * 7;

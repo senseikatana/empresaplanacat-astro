@@ -8,7 +8,7 @@ import type {
 	Escalation,
 	LineStats,
 	ReportAction,
-} from "../interfaces/tracking-store";
+} from "@/interfaces/tracking-store";
 
 export const REPORT_ACTIONS: readonly ReportAction[] = [
 	"passed",
@@ -85,7 +85,7 @@ export function listReports(lineId?: string): BusReport[] {
 	return reports.filter((r) => r.lineId === lineId);
 }
 
-export function listReviews(lineId?: string): BusReview[] {
+export function listReviews(lineId?: string): BusStoreReview[] {
 	const { reviews } = load();
 	if (!lineId) return reviews;
 	return reviews.filter((r) => r.lineId === lineId);

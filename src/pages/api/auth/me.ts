@@ -1,9 +1,9 @@
 import type { APIRoute } from "astro";
 import { eq } from "drizzle-orm";
-import { usuarios } from "../../../db/schema";
-import { db } from "../../../lib/db";
-import { authorize, clearSessionCookie } from "../../../lib/auth";
-import { publicUser } from "../../../lib/users";
+import { usuarios } from "@/db/schema";
+import { db } from "@/lib/db";
+import { authorize, clearSessionCookie } from "@/lib/auth";
+import { publicUser } from "@/lib/users";
 
 export const prerender = false;
 

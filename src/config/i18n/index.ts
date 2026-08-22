@@ -1,14 +1,14 @@
 import ca from "./ca.json";
 import en from "./en.json";
 import es from "./es.json";
-import type { I18nDictionary, Locale } from "../../interfaces/types";
+import type { I18nDictionary, Locale } from "@/interfaces";
 
 export type {
 	I18nDictionary,
 	Locale,
 	LocalizedPageProps,
 	DictionaryProps,
-} from "../../interfaces/types";
+} from "@/interfaces";
 
 export const DEFAULT_LOCALE: Locale = "ca";
 

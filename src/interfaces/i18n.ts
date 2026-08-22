@@ -1,13 +1,13 @@
-import type { About } from "./about";
-import type { BusTracking } from "./bus-tracking";
-import type { Common, Locale } from "./common";
-import type { Discretionary } from "./discretionary";
-import type { Home } from "./home";
-import type { HomeVariant1, HomeVariant2 } from "./booking";
-import type { Legal } from "./legal";
-import type { Locations, LocationsMobile } from "./locations";
-import type { MobileApp } from "./mobile-app";
-import type { Routes } from "./routes";
+import type { About } from "@/interfaces/about";
+import type { BusTracking } from "@/interfaces/bus-tracking";
+import type { Common, Locale } from "@/interfaces/common";
+import type { Discretionary } from "@/interfaces/discretionary";
+import type { Home } from "@/interfaces/home";
+import type { HomeVariant1, HomeVariant2 } from "@/interfaces/booking";
+import type { Legal } from "@/interfaces/legal";
+import type { Locations, LocationsMobile } from "@/interfaces/locations";
+import type { MobileApp } from "@/interfaces/mobile-app";
+import type { Routes } from "@/interfaces/routes";
 export interface I18nDictionary {
 	common: Common;
 	home: Home;
