@@ -1,29 +1,77 @@
 {
-     "formatter": {
+  "formatter": {
     "enabled": true,
-    "formatWithErrors": false,
+    "formatWithErrors": true,
     "ignore": [],
     "attributePosition": "auto",
     "indentStyle": "tab",
-    "indentWidth": 2,
+    "indentWidth": 4,
     "lineWidth": 80,
     "lineEnding": "lf"
   },
   "javascript": {
     "formatter": {
       "arrowParentheses":"always",
-      "bracketSameLine": false,
+      "bracketSameLine": true,
       "bracketSpacing": true,
       "delimiterSpacing": false,
       "jsxQuoteStyle": "double",
-      "quoteProperties": "asNeeded",
+      "quoteProperties": "as-needed",
       "semicolons": "always",
       "trailingCommas": "all"
     }
   },
   "json": {
     "formatter": {
-      "trailingCommas": "none"
+      "trailingCommas": "none",
+      "bracketSameLine": true,
+      "bracketSpacing": true,
+      "quoteProperties": "as-needed"
+    }
+  },
+
+  "typescript": {
+    "formatter": {
+      "arrowParentheses":"always",
+      "bracketSameLine": true,
+      "bracketSpacing": true,
+      "delimiterSpacing": false,
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "as-needed",
+      "semicolons": "always",
+      "trailingCommas": "all"
+    }
+  }, 
+  "astro": {
+    "formatter": {
+      "trailingCommas": "all",
+      "bracketSameLine": true,
+      "bracketSpacing": true,
+      "quoteProperties": "as-needed"
+    }
+  },
+  "css": {
+    "formatter": {
+      "trailingCommas": "all",
+      "bracketSameLine": true,
+      "bracketSpacing": true,
+      "quoteProperties": "as-needed"
+    }
+  },
+  "scss": {
+    "formatter": {
+      "trailingCommas": "all",
+      "bracketSameLine": true,
+      "bracketSpacing": true,
+      "quoteProperties": "as-needed"
+    }
+  },
+  "markdown": {
+    "formatter": {
+      "trailingCommas": "all",
+      "bracketSameLine": true,
+      "bracketSpacing": true,
+      "quoteProperties": "as-needed"
     }
   }
 }
